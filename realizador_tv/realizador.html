@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <script src="realizador.js"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Realizador de TV</title>
+  <h1 align="center" style="color:green"> <strong>Realizador de TV</strong> </h1>
+  <style>
+  table, td {
+    border: 0.2px solid black;
+    border-collapse: collapse;
+  }
+    body {
+    background-image: url("fondo_tv.jpg");
+}
+  }
+</style>
+</head>
+<body>
+<div align="center">
+
+      <video id="camara1" onmouseover="audioON(this)" onmouseout="audioOFF(this)"
+       width="320" height="240" controls  autoplay loop muted>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video mp4.
+      </video>
+
+      <video id="camara2" onmouseover="audioON(this)" onmouseout="audioOFF(this)"
+       width="320" height="240" controls autoplay loop muted>
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video mp4.
+      </video>
+
+      <video id="camara3" onmouseover="audioON(this)" onmouseout="audioOFF(this)"
+       width="320" height="240" controls autoplay loop muted>
+        <source src="video3.mp4" type="video/mp4">
+        Your browser does not support the video mp4.
+      </video>
+
+     <video id="camara4" onmouseover="audioON(this)" onmouseout="audioOFF(this)"
+       width="320" height="240" controls autoplay loop muted>
+        <source src="video4.mp4" type="video/mp4">
+        Your browser does not support the video mp4.
+      </video>
+
+</div>
+
+<div style="position: absolute; color: red; font: Verdana; left: 70%; top: 68%; text-align: center;">
+  Comienzo bucle en segundos:<br>
+  <input type="range" min="0" max="42" id="inicio">
+  <p id="inicio_mostrar" class="right"></p>
+  Terminar bucle en segundos:<br>
+  <input type="range" min="0" max="42" id="fin">
+  <p id="fin_mostrar" class="right"></p>
+</div>
+
+<div style="position: absolute; color: red; left: 78%; top: 85%; text-align: center;">
+  Realizar el bucle:
+  <input type="submit" value="INICIAR" onclick="bucle(this)">
+</div>
+
+<div style="; left: 20%; top: 50%; align: center;">
+  <button id="1" onclick="cambiar_video(this)">Cámara 1</button>
+  <button id="2" onclick="cambiar_video(this)">Cámara 2</button>
+  <button id="3" onclick="cambiar_video(this)">Cámara 3</button>
+  <button id="4" onclick="cambiar_video(this)">Cámara 4</button>
+  <video id="video_principal" width="500" height="380" muted controls >
+    <source src="video3.mp4" type="video/mp4">
+    Your browser does not support the video mp4.
+  </video>
+  <br>
+</div>
+</body>
+</html>
